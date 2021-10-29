@@ -18,7 +18,7 @@ const fetchAlbum = () => {
         const album =
         `
         <div class="col-lg-2 col-sm-6 mt-2">
-            <img src="${data.cover_big}" height="180px" alt="">
+            <img "src="${data.cover_big}" height="180px" alt="">
           </div>
           <div class="col-lg-10 col-sm-6 align-self-end">
             <div>
@@ -30,7 +30,7 @@ const fetchAlbum = () => {
             <div class="">
               <p> <small> <strong>
               <img src="${data.cover_small}" height="22px" alt="" style="border-radius: 2rem;">
-              <a href="./Artistpage/artist.html">${data.artist.name}</a>. 
+              <a href="./Artistpage/artist.html?artistId=${data.artist.id}">${data.artist.name}</a>. 
               </strong>2018<strong> . </strong>${data.tracks.data.length}songs<strong>, </strong> 1hr 19 min</small></p>
             </div>
           </div>
