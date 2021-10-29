@@ -432,3 +432,9 @@ footer #myProgressBar .icons {
 /* .scrollbar-black {
     scrollbar-color: #000 #F5F5F5;
     } */
+
+/*SPOTIFY-2.O*/
+.recently_played {
+  display: flex;
+  flex-wrap: wrap;
+}
