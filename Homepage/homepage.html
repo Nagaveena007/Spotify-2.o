@@ -183,59 +183,11 @@
     <!-- Recently Played-->
   
     <div class="container">
-      <div class="row headline__container headline__section mb-2 mt-4">
+      <div class="row headline__container headline__section  ">
           <h3 id="recentlyPlayed"> Recently Played</h3>
       </div>
-      <div class="row">
-      <div class="card col-sm-6 col-md-2 px-2 py-2">
-        <img class="card__image" src="covers/Recently-played/burning-jazz-rock.jpg" />
-        <div class="card__body">
-          <div class="card__meta">
-            <p><strong>De Keiharde Podc...</strong><br><span>NPO Radio2</span></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card col-sm-6 col-md-2 px-2 py-2">
-          <img class="card__image" src="covers/Recently-played/daily-cogito.jpg" alt="..."/>
-          <div class="card__body">
-            <div class="card__meta">
-              <p><strong>Metal Mix</strong><span>By Spotify</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card col-sm-6 col-md-2 px-2 py-2">
-          <img class="card__image" src="covers/Recently-played/demomi.jpg" alt="..."/>
-          <div class="card__body">
-            <div class="card__meta">
-              <p><strong>Metal Ballads</strong><span>By Spotify</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card col-sm-6 col-md-2 px-2 py-2">
-          <img class="card__image" src="covers/Recently-played/il.jpeg" alt="..."/>
-          <div class="card__body">
-            <div class="card__meta">
-              <p><strong>Burning Jazz-rock...</strong><br><span>fiery, modern,groovy,jazz..</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card col-sm-6 col-md-2 px-2 py-2">
-          <img class="card__image" src="covers/Recently-played/nymphetamine.jpg" alt="..."/>
-          <div class="card__body">
-            <div class="card__meta">
-              <p><strong>Burning Jazz-rock...</strong><br><span>fiery, modern,groovy,jazz..</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card col-sm-6 col-md-2 px-2 py-2">
-          <img class="card__image" src="covers/Recently-played/le-bask.jpg" />
-          <div class="card__body">
-            <div class="card__meta">
-                <p><strong>LE BASK</strong><span><br>Artist</span></p>
-            </div>
-          </div>
-        </div>
+      <div class="row recently_played" id="cards-wrapper">
+        
       </div>
 
       <!-- Show Story -->
@@ -247,7 +199,7 @@
           <p>Podcasts we think you'll get hooked on.</p>
          </div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="card col-sm-6 col-md-2 px-2 py-2">
           <img class="card__image" src="covers/Recently-played/medians.jpg" />
           <div class="card__body">
@@ -457,7 +409,7 @@
       let username = localStorage.getItem("username-field");
       document.getElementById("username1").innerText = username;
       </script>
-
+<script src="home-page.js"></script>
     <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
