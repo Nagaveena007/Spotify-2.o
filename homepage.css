@@ -438,3 +438,8 @@ footer #myProgressBar .icons {
   display: flex;
   flex-wrap: wrap;
 }
+.card-img {
+  object-fit: cover;
+  min-height: 150px;
+  min-width: 150px;
+}

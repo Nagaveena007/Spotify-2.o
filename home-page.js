@@ -3,6 +3,8 @@ const cardsWrapper = document.querySelector("#cards-wrapper");
 window.onload = () => {
   loadCards();
   loadArtistCards();
+  loadAlbumCards();
+  displayAlbumCards();
 };
 let cards = [];
 function loadCards() {
@@ -19,9 +21,9 @@ function loadCards() {
 }
 function displayCards() {
   cards.forEach((card) => {
-    cardsWrapper.innerHTML += `<div class="card col-sm-6 col-md-2 px-2 py-2">
-    <a href="album.html">
-    <img class="card__image " src="${card.album.cover_medium}" />
+    cardsWrapper.innerHTML += `<div class="card col-12 col-sm-6 col-md-4 col-lg-2 px-2 py-2">
+    <a href="album.html?id=${card.album.id}">
+    <img class="card__image card-img" src="${card.album.cover_medium}" />
   </a>
     <div class="card__body">
       <div class="card__meta">
@@ -34,6 +36,7 @@ function displayCards() {
 
 function onclickAlbum() {
   // <a href="album.html"></a>;
+  onclick = "location.href = 'album.html'";
 }
 /**artist */
 function loadArtistCards() {
