@@ -1,27 +1,28 @@
 const albumsWrapper = document.querySelector("#albums-wrapper");
 
 window.onload = () => {
-  const id = window.location.search; // in reality you hvae to grab it from the url...
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
   loadAlbumCards(id);
-  displayAlbumCards();
+  //displayAlbumCards();
 };
 
-const albums = [];
+let albums = [];
 function loadAlbumCards(id) {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
     .then((response) => response.json())
     .then((album_info) => {
       albums = album_info;
       console.log(albums);
-      displayArtistCards();
+      displayAlbumCards();
     })
     .catch((error) => {
       console.log(error.message);
     });
 }
 function displayAlbumCards() {
-  albums.forEach((card) => {
-    albumsWrapper.innerHTML += `
+  //albums.forEach((card) => {
+  albumsWrapper.innerHTML += `
         <div class="col-lg-2 col-sm-6 mt-2">
         <img src="${card.album.cover_big}" height="180px" alt="">
       </div>
@@ -38,6 +39,6 @@ function displayAlbumCards() {
            "${card.artist.name}" . </strong>2018<strong> . </strong>22 songs<strong>, </strong> ${card.artist.duration}</small></p>
         </div>
       </div>`;
-  });
+  // });
 }
 //window.location.search;
